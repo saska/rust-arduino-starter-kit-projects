@@ -3,12 +3,7 @@ name = "rust-arduino-projects-03-love-o-meter"
 version = "0.1.0"
 authors = ["Saska Karsi <saska.karsi@gmail.com>"]
 edition = "2021"
-license = "MIT OR Apache-2.0"
-
-[[bin]]
-name = "rust-arduino-projects-03-love-o-meter"
-test = false
-bench = false
+license = "MIT"
 
 [dependencies]
 panic-halt = "0.2.0"

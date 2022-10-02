@@ -1,7 +1,11 @@
-# Love-O-Meter
+# Arduino starter kit projects in Rust
 
-Project no. 3 from the official [arduino starter kit](https://store.arduino.cc/products/arduino-starter-kit-multi-language) in rust.
+Projects from the [arduino starter kit](https://store.arduino.cc/products/arduino-starter-kit-multi-language) in rust.
+
+## Running
+
+Follow dependency installation instructions in [avr-hal](https://github.com/Rahix/avr-hal). Then you can run each project with `cargo run --bin <project-name>`. 
 
 ## Notes
 
-- Weird linker error without `"no-builtins": true` in `avr-atmega328p.json`
+- Weird linker error without `"no-builtins": true` in `avr-atmega328p.json` when using `ufmt_float` crate.
