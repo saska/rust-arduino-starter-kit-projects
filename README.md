@@ -4,7 +4,7 @@ Projects from the [arduino starter kit](https://store.arduino.cc/products/arduin
 
 ## Running
 
-Follow dependency installation instructions in [avr-hal](https://github.com/Rahix/avr-hal). Then you can run each project with `cargo run --bin <project-name>`. 
+Follow dependency installation instructions in [avr-hal](https://github.com/Rahix/avr-hal). Then you can run each project with `cargo run --bin <project-name>` (you can find the projects in `src/bin`). 
 
 ## Notes
 
