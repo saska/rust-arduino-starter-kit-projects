@@ -42,6 +42,6 @@ fn main() -> ! {
         let temp_str = uFmt_f32::Three(temp);
         ufmt::uwrite!(&mut serial, "temp (C): {} ", temp_str).void_unwrap();
         ufmt::uwriteln!(&mut serial, "").void_unwrap();
-        arduino_hal::delay_ms(1000);
+        arduino_hal::delay_ms(1);
     }
 }
