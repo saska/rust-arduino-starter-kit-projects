@@ -39,7 +39,6 @@ fn main() -> ! {
         if diff > 6.0 {
             d4.set_high();
         }
-        
         let temp_str = uFmt_f32::Three(temp);
         ufmt::uwrite!(&mut serial, "temp (C): {} ", temp_str).void_unwrap();
         ufmt::uwriteln!(&mut serial, "").void_unwrap();
