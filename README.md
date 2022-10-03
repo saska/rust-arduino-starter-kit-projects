@@ -2,7 +2,7 @@
 
 Projects from the [arduino starter kit](https://store.arduino.cc/products/arduino-starter-kit-multi-language) in rust.
 
-Disclaimer: I don't know embedded or rust as of beginning this project so stuff might be wack. I welcome any comments / feedback on how to do it better.
+Disclaimer: I don't know embedded or rust as of the beginning this project so stuff might be wack. I welcome any comments / feedback on how to do it better.
 
 ## Running
 
