@@ -2,7 +2,7 @@
 name = "rust-arduino-projects-03-love-o-meter"
 version = "0.1.0"
 authors = ["Saska Karsi <saska.karsi@gmail.com>"]
-edition = "2021"
+edition = "2022"
 license = "MIT"
 
 [dependencies]
