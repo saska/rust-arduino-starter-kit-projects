@@ -25,4 +25,9 @@ The above (approximately) corresponds to a 50% duty cycle. Laziness, I've learne
 
 We know that the microcontroller in the Arduino UNO is the ATmega328p, so after figuring out that the pins specified in the task (`~D9`, `~D10` and `~D11`) correspond to the MCU pins `PB1`, `PB2` and `PB3` respectively, we're going to have to find a [datasheet](https://www.google.com/search?q=ATmega328p+datasheet) for it, which I've not hard linked because it's going to get moved anyway so just pick one of the first ones.
 
-The datasheet will tell us ([here](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf#G1183241) if it won't move) that the timer output pins for `PB1`, `PB2` and `PB3` are `OC1A`, `OC1B` and `OC2A` respectively.
+After spending an hour trying to make sense of the datasheet (you can skip this step) we can realize that we don't actually know if those timers are being used by the Arduino UNO and we can't faff about with them willy nilly. In researching this we can find the [Secrets of Arduino PWM](https://docs.arduino.cc/tutorials/generic/secrets-of-arduino-pwm) which gives us all the information we were going to need anyway.
+
+The critical bits of information are:
+* Timer 0 *is* being used internally for `delay()` and `millis()` so we can feel validated.
+* `~D9`, `~D10` and `~D11` (`PB1`, `PB2` and `PB3`) correspond to timer outputs `OC1A`, `OC1B`, `OC2A`.
+* The UNO `analogWrite()` uses phase-correct PWM on these pins. This isn't mentioned anywhere, but the [docs](https://www.arduino.cc/reference/en/language/functions/analog-io/analogwrite/) for `analogWrite()` tell us that the PWM frequency is 490 Hz for all pins other than 5 and 6, which are 980 Hz. These correspond with the UNO examples in Secrets of Arduino PWM for phase-correct and fast PWM respectively.
