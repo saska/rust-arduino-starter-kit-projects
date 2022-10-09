@@ -22,7 +22,6 @@ fn main() -> ! {
     let mut green = pins.d3.into_output();
     let mut red1 = pins.d4.into_output();
     let mut red2 = pins.d5.into_output();
-    
 
     loop {
         if button.is_low() {
