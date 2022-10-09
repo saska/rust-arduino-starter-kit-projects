@@ -5,9 +5,10 @@ use arduino_hal::prelude::*;
 use panic_halt as _;
 use ufmt_float::uFmt_f32;
 
+#[allow(non_snake_case)] // for clippy; TMP36 is the name the way it's spelled everywhere
 fn get_temp_TMP36(sensor_value: u16) -> f32 {
     let voltage: f32 = (sensor_value as f32 / 1024.0) * 5.0;
-    return (voltage - 0.5) * 100.0;
+    (voltage - 0.5) * 100.0
 }
 
 #[arduino_hal::entry]

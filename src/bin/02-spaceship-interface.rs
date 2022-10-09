@@ -18,7 +18,7 @@ fn main() -> ! {
      * examples available.
      */
 
-    let mut button = pins.d2;
+    let button = pins.d2;
     let mut green = pins.d3.into_output();
     let mut red1 = pins.d4.into_output();
     let mut red2 = pins.d5.into_output();

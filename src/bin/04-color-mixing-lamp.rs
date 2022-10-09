@@ -34,9 +34,9 @@ fn main() -> ! {
             .bits(0b100)
     });
 
-    let mut r = &tc1.ocr1b; // pin ~D10
-    let mut g = &tc1.ocr1a; // pin ~D9
-    let mut b = &tc2.ocr2a; // pin ~D11
+    let r = &tc1.ocr1b; // pin ~D10
+    let g = &tc1.ocr1a; // pin ~D9
+    let b = &tc2.ocr2a; // pin ~D11
 
     loop {
         let red_sensor_val = rs.analog_read(&mut adc);
